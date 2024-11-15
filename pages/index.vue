@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 useSeoMeta({
     title: "Интерьер+Дизайн",
     ogTitle: "Интерьер+Дизайн",
@@ -153,8 +154,7 @@ const swiperEventsConfig = {
         <section class="full-block">
             <a href="#" class="full-block__media">
                 <picture>
-                    <img src="https://api.interior.ru/media/thumb/1650x930_5/lavrikova/Obl1920x1100_292.jpg"
-                        alt="">
+                    <img src="https://api.interior.ru/media/thumb/1650x930_5/lavrikova/Obl1920x1100_292.jpg" alt="">
                 </picture>
             </a>
         </section>

@@ -1,9 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: "static",
-  router: {
-    base: process.env.NODE_ENV === "production" ? process.env.BASE_PATH : "/",
-  },
   compatibilityDate: "2024-04-03",
 
   devtools: { enabled: true },
@@ -16,6 +12,11 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "nuxt-swiper",
   ],
+
+  image: {
+    dir: "public",
+    format: ["avif", "webp", "jpeg", "jpg", "png", "svg"],
+  },
 
   fonts: {
     families: [{ name: "Montserrat", provider: "google" }],
