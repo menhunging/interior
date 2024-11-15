@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getAssetPath } from './utils/pathHelper';
+import { getAssetPath } from '../utils/pathHelper';
 </script>
 
 <template>

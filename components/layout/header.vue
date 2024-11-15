@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
-import { getAssetPath } from './utils/pathHelper';
+import { getAssetPath } from '../utils/pathHelper';
 
 defineProps<{
     handleDropHeader: (event: MouseEvent) => void;
