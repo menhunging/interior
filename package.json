@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
@@ -24,6 +25,7 @@
     "@pinia/nuxt": "^0.6.0",
     "@types/node": "^22.9.0",
     "@vueuse/nuxt": "^11.2.0",
+    "push-dir": "^0.4.1",
     "sass": "^1.80.5"
   }
 }
