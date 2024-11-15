@@ -1,0 +1,1 @@
+import{u as e}from"./Bp_v2a52.js";import{d as t,o,D as n}from"./QF9WHSv6.js";import"./B0GXcGFM.js";import"./D-BjG9ME.js";const l=t({__name:"index",setup(r){return e({title:"О нас",ogTitle:"О нас",description:"Это страница о нашей компании",ogDescription:"Это страница о нашей компании"}),(a,i)=>(o(),n("span",null,"trendy Page"))}});export{l as default};
