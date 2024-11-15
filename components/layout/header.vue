@@ -79,10 +79,10 @@ onBeforeUnmount(() => {
 
         <div class="logo">
             <NuxtLink v-if="!isScroll" to="/" class="logo__link logo__link--static">
-                <NuxtImg :src="getAssetPath('/svg/logo.svg')" alt="logo" />
+                <NuxtImg :src="getAssetPath('svg/logo.svg')" alt="logo" />
             </NuxtLink>
             <NuxtLink v-else to="/" class="logo__link logo__link--fixed">
-                <NuxtImg :src="getAssetPath('/svg/logo_small.svg')" alt="logo" />
+                <NuxtImg :src="getAssetPath('svg/logo_small.svg')" alt="logo" />
             </NuxtLink>
         </div>
 
