@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   target: "static",
-  router: { base: "/interior/" },
+  router: {
+    base: process.env.NODE_ENV === "production" ? process.env.BASE_PATH : "/",
+  },
   compatibilityDate: "2024-04-03",
 
   devtools: { enabled: true },

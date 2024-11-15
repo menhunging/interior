@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-
+import { getAssetPath } from './utils/pathHelper';
 </script>
 
 <template>
     <footer class="footer">
         <div class="logo">
             <NuxtLink to="/" class="logo__link">
-                <NuxtImg src="svg/logo.svg" alt="logo" />
+                <NuxtImg :src="getAssetPath('/svg/logo.svg')" alt="logo" />
             </NuxtLink>
         </div>
 

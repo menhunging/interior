@@ -44,12 +44,8 @@ const swiperConfig = {
             slidesPerView: 5.5,
             spaceBetween: 32
         },
-        1750: {
+        1800: {
             slidesPerView: 6.5,
-            spaceBetween: 32
-        },
-        2000: {
-            slidesPerView: 7.5,
             spaceBetween: 32
         },
         2500: {
