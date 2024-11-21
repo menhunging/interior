@@ -6,3 +6,5 @@ export function getAssetPath(relativePath:string) {
   }
   return `${basePath}${relativePath}`;
 }
+
+// TODO пока не использую, может и не буду использовать.
