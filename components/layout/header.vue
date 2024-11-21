@@ -103,7 +103,7 @@ onBeforeUnmount(() => {
                 <li><a href="#">Guide</a></li>
                 <li><a href="#">Design Now</a></li>
             </ul>
-            <!-- <NuxtImg :src="getAssetPath('/img/dn_button.webp')" /> -->
+            <NuxtImg src="/img/dn_button.webp" />
         </div>
 
         <nav class="menu">
