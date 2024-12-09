@@ -102,7 +102,7 @@ body,
   max-width: 100%;
   min-height: 100dvh;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 
   footer,
   .footer {
@@ -469,6 +469,92 @@ section {
       height: 100%;
       object-fit: contain;
     }
+  }
+}
+
+.link-facebook {
+  display: block;
+  width: 8px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='20' viewBox='0 0 8 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.81399 6.86384H0V9.96181H1.81399V19.0614H5.30499V9.92255H7.74098L7.99998 6.86384H5.30598C5.30598 6.86384 5.30598 5.7211 5.30598 5.12205C5.30598 4.40016 5.44598 4.11523 6.11198 4.11523C6.64898 4.11523 8.00098 4.11523 8.00098 4.11523V0.938721C8.00098 0.938721 6.01098 0.938721 5.58398 0.938721C2.98699 0.938721 1.815 2.13482 1.815 4.42331C1.814 6.41883 1.81399 6.86384 1.81399 6.86384Z' fill='%23333333'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.link-pinterest {
+  display: block;
+  width: 14px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='20' viewBox='0 0 14 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.42597 0.938232C2.48996 0.938232 0.00195312 4.48324 0.00195312 7.44026C0.00195312 9.23038 0.677955 10.8242 2.12896 11.4172C2.36696 11.5148 2.57996 11.4202 2.64996 11.1564C2.69696 10.9732 2.81096 10.5121 2.86196 10.3218C2.93096 10.06 2.90496 9.96737 2.71296 9.74083C2.29496 9.24649 2.02696 8.60615 2.02696 7.70002C2.02696 5.0692 3.99096 2.71426 7.13997 2.71426C9.92997 2.71426 11.462 4.42182 11.462 6.70327C11.462 9.70459 10.137 12.2387 8.16997 12.2387C7.08296 12.2387 6.26996 11.3376 6.52896 10.2342C6.84096 8.91524 7.44597 7.4906 7.44597 6.54016C7.44597 5.68739 6.98997 4.97758 6.04596 4.97758C4.93496 4.97758 4.04196 6.12837 4.04196 7.67082C4.04196 8.65448 4.37396 9.31898 4.37396 9.31898C4.37396 9.31898 3.23696 14.1457 3.03896 14.9914C2.64196 16.6748 2.97796 18.7398 3.00696 18.9472C3.02396 19.071 3.18196 19.1002 3.25396 19.0076C3.35696 18.8737 4.67896 17.2356 5.12896 15.6005C5.25596 15.1384 5.85896 12.7391 5.85896 12.7391C6.21996 13.4298 7.27396 14.0369 8.39597 14.0369C11.736 14.0369 14.001 10.9863 14.001 6.90262C14.002 3.8137 11.392 0.938232 7.42597 0.938232Z' fill='%23333333'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.link-x {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 1.78811C17.338 2.09116 16.626 2.29655 15.879 2.38817C16.641 1.91698 17.227 1.16992 17.502 0.278889C16.789 0.715847 15.999 1.03299 15.157 1.20415C14.483 0.463135 13.524 0 12.462 0C10.079 0 8.326 2.29655 8.865 4.68069C5.796 4.52262 3.074 3.00434 1.253 0.696717C0.285 2.41032 0.751 4.6525 2.396 5.78718C1.792 5.76705 1.221 5.59589 0.724001 5.30995C0.684001 7.07591 1.91 8.7281 3.685 9.09659C3.165 9.24258 2.596 9.27681 2.018 9.16203C2.488 10.6763 3.851 11.7798 5.467 11.81C3.914 13.0655 1.959 13.6273 0 13.3887C1.634 14.47 3.575 15.1012 5.66 15.1012C12.516 15.1012 16.389 9.12277 16.157 3.76046C16.878 3.22484 17.505 2.55329 18 1.78811Z' fill='%23333333'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.banner-block {
+  position: sticky;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  height: 600px;
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 600px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @include responsive767 {
+    display: none;
+  }
+}
+
+.offset-block {
+  width: calc(100% + 64px);
+  position: relative;
+  padding-left: 32px;
+  padding-right: 32px;
+  left: -32px;
+  overflow: hidden;
+
+  @include responsive767 {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: calc(100% + 32px);
+    left: -16px;
   }
 }
 

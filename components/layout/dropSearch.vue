@@ -82,8 +82,8 @@ defineProps<{
                         <a href="#" class="popular-articles__link"><span class="text-default">Departo: новый бренд для
                                 глобальных кочевников</span></a>
                         <div class="popular-articles__desc">
-                            <span class="popular-articles__cat">Дизайн</span>
-                            <span class="popular-articles__date">6 ноября, 2024</span>
+                            <a href="#" class="popular-articles__cat"><span class="text-default">Дизайн</span></a>
+                            <!-- <span class="popular-articles__date">6 ноября, 2024</span> УБРАЛИ ПО ТРЕБОВАНИЮ ДАТУ-->
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@ defineProps<{
         font-size: 16px;
         line-height: 20px;
         margin-top: 16px;
-        display: flex;
+        display: inline-block;
         @include hoverDefault($colorBlack, 1px, 0.3s);
 
         @include responsive767 {
@@ -267,6 +267,11 @@ defineProps<{
     &__cat {
         opacity: 0.3;
         color: $colorBlack;
+        @include hoverDefault($colorBlack, 1px, 0.3s);
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &__date {

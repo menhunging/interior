@@ -120,14 +120,16 @@ const swiperEventsConfig = {
                 <span class="caption caption--h3">новости</span>
                 <div class="news__list">
                     <div class="news__item" v-for="(item, index) in newsItems" :key="index">
-                        <a href="/"><span class="text-default">ARTDOM объявляет OPEN CALL для независимых
-                                авторов</span></a>
+                        <NuxtLink to="/news">
+                            <span class="text-default">ARTDOM объявляет OPEN CALL для независимых
+                                авторов</span>
+                        </NuxtLink>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="special-projects">
+        <section class="special-projects offset-block">
             <div class="section-title">
                 <h2 class="caption caption--h2">Спецпроекты</h2>
             </div>
@@ -172,7 +174,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -187,7 +189,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -202,7 +204,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -217,7 +219,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -232,7 +234,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--big">
@@ -247,7 +249,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -262,7 +264,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -277,32 +279,46 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
         </section> <!-- article -->
 
-        <section class="ticker">
-            <div class="ticker-list">
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+        <section class="news news--mobile">
+            <span class="caption caption--h3">новости</span>
+            <div class="news__list">
+                <div class="news__item" v-for="(item, index) in newsItems" :key="index">
+                    <NuxtLink to="/news">
+                        <span class="text-default">ARTDOM объявляет OPEN CALL для независимых
+                            авторов</span>
+                    </NuxtLink>
+                </div>
             </div>
+        </section>
 
-            <div class="ticker-list">
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
-                <div class="ticker-item ticker-item--design"><a href="#"></a></div>
-            </div>
+        <section class="ticker-wrapper offset-block">
+            <section class="ticker">
+                <div class="ticker-list">
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                </div>
+
+                <div class="ticker-list">
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--guide"><a href="#"></a></div>
+                    <div class="ticker-item ticker-item--design"><a href="#"></a></div>
+                </div>
+            </section>
         </section>
 
         <section class="grid-article">
@@ -318,7 +334,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -333,7 +349,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -348,7 +364,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -363,7 +379,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -378,7 +394,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--big">
@@ -393,7 +409,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -408,7 +424,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -423,12 +439,12 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
         </section> <!-- article -->
 
-        <section class="events-moscow">
+        <section class="events-moscow offset-block">
             <div class="section-title">
                 <h2 class="caption caption--h2">События в Москве</h2>
             </div>
@@ -468,7 +484,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -483,7 +499,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -498,7 +514,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -513,7 +529,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--small">
@@ -528,7 +544,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item--big">
@@ -543,7 +559,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -558,7 +574,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <div class="grid-article__item grid-article__item">
@@ -573,7 +589,7 @@ const swiperEventsConfig = {
                 <a href="#" class="grid-article__link"><span class="text-default">Сергей Лимонов: «Суть искусства — его
                         доброта, радикальность,
                         искренность, оголенная нервность»</span></a>
-                <span class="grid-article__desc">Арт</span>
+                <a href="#" class="grid-article__desc"><span class="text-default">Арт</span></a>
             </div>
 
             <span class="btn">Показать больше статей</span>
@@ -781,13 +797,61 @@ const swiperEventsConfig = {
         text-decoration: none;
         @include hoverDefault($colorDark, 1px, 0.3s);
     }
+
+    &--mobile {
+        display: none;
+        position: relative;
+
+        .caption {
+            padding-left: 32px;
+            padding-right: 32px;
+
+            @include responsive767 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        @include responsive1279 {
+            display: block;
+            width: calc(100% + 64px);
+            left: -32px;
+        }
+
+        @include responsive767 {
+            width: calc(100% + 32px);
+            left: -16px;
+        }
+
+        .news__list {
+            height: auto;
+            width: 100%;
+            flex-direction: row;
+            padding-bottom: 0;
+
+            @include responsive1279 {
+                padding-left: 32px;
+                padding-right: 32px;
+                gap: 4px;
+            }
+
+            @include responsive767 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        .news__item {
+            width: 156px;
+            min-width: 156px;
+        }
+    }
 }
 
 // special-projects
 .special-projects {
-    width: 100%;
-    max-width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 
     .caption {}
 
@@ -966,6 +1030,7 @@ const swiperEventsConfig = {
         @include plusIconLeft;
         padding-left: 15px;
         padding-top: 16px;
+        max-width: 455px;
 
         &:before {
             left: 0;
@@ -993,6 +1058,11 @@ const swiperEventsConfig = {
         opacity: 0.5;
         margin-top: 5px;
         padding-left: 15px;
+        @include hoverDefault($colorDark, 1px, 0.3s);
+
+        &:hover {
+            opacity: 1;
+        }
 
         @include responsive767 {
             margin-top: 0;
@@ -1318,6 +1388,8 @@ const swiperEventsConfig = {
         @include responsive639 {
             max-width: 70%;
             padding-top: calc(231 / 257* 100%);
+            margin-left: auto;
+            margin-right: auto;
         }
 
         img {
@@ -1335,23 +1407,26 @@ const swiperEventsConfig = {
         margin-top: 10px;
 
         @include responsive639 {
-            max-width: 70%;
+            max-width: 100%;
         }
 
     }
 }
 
 //ticket
+.ticker-wrapper {
+    @include responsive767 {
+        background-color: $colorBlack;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
 .ticker {
     position: relative;
     width: 200%;
     display: flex;
     will-change: transform;
-    left: -32px;
-
-    @include responsive767 {
-        background-color: $colorBlack;
-    }
 
     &:hover {
         .ticker-list {
@@ -1365,10 +1440,11 @@ const swiperEventsConfig = {
         display: flex;
         gap: 32px;
         flex-shrink: 0;
-        margin-left: 0;
+        margin-left: 32px;
 
         @include responsive1023 {
-            gap: 20px
+            gap: 20px;
+            margin-left: 20px;
         }
     }
 

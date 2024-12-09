@@ -96,6 +96,10 @@ import { getAssetPath } from '../utils/pathHelper';
         grid-column: 2/3;
         grid-row: 2/3;
 
+        .caption {
+            max-width: 400px;
+        }
+
         @include responsive1279 {
             grid-column: initial;
             grid-row: initial;
