@@ -4,6 +4,7 @@ import { defineProps, defineEmits } from 'vue';
 defineProps<{
     isOpenHeader: boolean;
     handleDropHeader: (event: MouseEvent) => void;
+    handleOpenPublic: (event: MouseEvent) => void;
 }>();
 </script>
 
@@ -25,7 +26,7 @@ defineProps<{
                 <a href="#"><span class="text-default">Архитектура</span></a>
                 <a href="#"><span class="text-default">АРТ</span></a>
                 <a href="#"><span class="text-default">Интерьеры</span></a>
-                <a href="#" class="link-publish"><strong><span class="text-default">ОПУБЛИКОВАТЬ
+                <a href="#" class="link-publish" @click="handleOpenPublic"><strong><span class="text-default">ОПУБЛИКОВАТЬ
                             ПРОЕКТ</span></strong></a>
             </div>
             <div class="footer-menu__col">

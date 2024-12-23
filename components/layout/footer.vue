@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-import { getAssetPath } from '../utils/pathHelper';
+import { defineProps } from 'vue'
+
+defineProps<{
+    isOpenPublic: boolean;
+    handleOpenPublic: (event: MouseEvent) => void;
+}>();
 </script>
 
 <template>
@@ -17,7 +22,8 @@ import { getAssetPath } from '../utils/pathHelper';
                 <a href="#"><span class="text-default">Архитектура</span></a>
                 <a href="#"><span class="text-default">АРТ</span></a>
                 <a href="#"><span class="text-default">Интерьеры</span></a>
-                <a href="#" class="link-publish"><strong><span class="text-default">ОПУБЛИКОВАТЬ
+                <a href="#" class="link-publish" @click="handleOpenPublic"><strong><span
+                            class="text-default">ОПУБЛИКОВАТЬ
                             ПРОЕКТ</span></strong></a>
             </div>
             <div class="footer-menu__col">
@@ -59,6 +65,105 @@ import { getAssetPath } from '../utils/pathHelper';
                 <button type="submit" class="btn">Подписаться</button>
             </form>
 
+        </div>
+
+        <div class="project-publication" :class="{ opened: isOpenPublic }">
+            <div class="logo">
+                <NuxtLink to="/" class="logo__link">
+                    <NuxtImg src="/svg/logo.svg" alt="logo" />
+                </NuxtLink>
+            </div>
+
+            <div class="project-publication__content">
+                <span class="caption">Анкета для публикации проекта</span>
+
+                <div class="project-publication__form">
+                    <span class="project-publication__title">контакты</span>
+
+                    <div class="input-list">
+                        <div class="input-item">
+                            <label for="">Фамилия и имя автора / название бюро <span class="imp">*</span> </label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Ссылка на портрет автора <span class="imp">*</span> </label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Почта <span class="imp">*</span> </label>
+                            <input type="email">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Телефон</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Страницы автора в социальных сетях</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Сайт</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Город <span class="imp">*</span> </label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <span class="project-publication__title">Проект</span>
+
+                    <div class="input-list">
+                        <div class="input-item input-item--full">
+                            <label for="">Описание проекта <span class="imp">*</span> </label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Был ли где-то опубликован проект?</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Бренды в проекте</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Ссылка на фото проекта <span class="imp">*</span> </label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Локация проекта</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Площадь объекта, м2</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Год реализации проекта</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Фотограф съемки</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-item">
+                            <label for="">Стилист съемки</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="project-publication__text">
+                        <p>
+                            Нажимая кнопку «Отправить», вы подтверждаете, что ознакомились и принимаете условия <a
+                                href="#">пользовательского соглашения</a>
+                        </p>
+                    </div>
+
+                    <button class="btn" type="submit">Отправить</button>
+                </div>
+            </div>
+
+            <button class="btn-close" @click="handleOpenPublic"></button>
         </div>
     </footer>
 </template>
@@ -192,5 +297,135 @@ import { getAssetPath } from '../utils/pathHelper';
 .not-project {
     order: 3;
     margin-top: 16px;
+}
+
+// project-publication
+.project-publication {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: $colorWhite;
+    z-index: 9;
+    padding: 32px;
+    overflow: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    @include responsive1279 {
+        display: none;
+    }
+
+    &.opened {
+        transform: translateY(0%);
+    }
+
+    .logo {}
+
+    .caption {
+        font-size: 20px;
+    }
+
+    .project-publication__content {
+        max-width: 664px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-publication__form {
+        margin-top: 32px;
+    }
+
+    .project-publication__title {
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    .project-publication__text {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 44px;
+        margin-bottom: 28px;
+        display: block;
+
+        a {
+            text-decoration: underline;
+            transition: text-decoration 0.3s;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+
+    .input-list {
+        display: grid;
+        align-items: flex-end;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 64px;
+        margin-top: 20px;
+
+        &+.project-publication__title {
+            margin-top: 32px;
+        }
+    }
+
+    .input-item {
+
+        &.input-item--full {
+            grid-column: 1/3;
+        }
+
+        label {
+            font-size: 12px;
+            line-height: 30px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            height: 30px;
+            border: 0;
+            border-bottom: solid 1px #7B7B7B;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            height: 101px;
+            outline: none;
+            border: solid 1px $colorBlack;
+            padding: 16px;
+            resize: vertical;
+        }
+
+        .imp {
+            color: #F14C4C;
+        }
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .btn-close {
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline y1='-0.5' x2='16.722' y2='-0.5' transform='matrix(0.696455 -0.717601 0.696455 0.717601 1.35376 12.9998)' stroke='black'/%3e%3cline y1='-0.5' x2='16.722' y2='-0.5' transform='matrix(0.696455 0.717601 -0.696455 0.717601 1 1.00024)' stroke='black'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 12px;
+        height: 12px;
+    }
+
+
+
+
+
 }
 </style>

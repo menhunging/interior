@@ -1517,4 +1517,5 @@ const swiperEventsConfig = {
         }
     }
 }
+
 </style>
